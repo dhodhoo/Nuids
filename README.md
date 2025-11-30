@@ -1,3 +1,3 @@
 # Nuids
 
-nuidss.vercel.app
+https://nuidss.vercel.app
