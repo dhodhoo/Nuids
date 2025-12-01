@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuids - Solusi Gizi Anak</title>
+    <script>
+      const currentUser = localStorage.getItem("currentUser");
+      if (currentUser) {
+        const user = JSON.parse(currentUser);
+        if (user.role === "admin") {
+          location.href = "src/pages/admin/admin.html";
+        } else {
+          location.href = "src/pages/user/home.html";
+        }
+      } else {
+        location.href = "src/pages/landing.html";
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

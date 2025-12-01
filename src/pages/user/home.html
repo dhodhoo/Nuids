@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuids Dashboard</title>
+    <link
+      rel="icon"
+      href="../../../public/images/logo.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../styles/pages/home.css" />
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../lib/background-blob.css" />
+  </head>
+  <body>
+    <section class="menu-section">
+      <h2 class="home-label">Pintasan Fitur:</h2>
+      <div class="menu-container">
+        <a
+          href="/src/pages/user/(features)/tracking.html"
+          style="
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          "
+        >
+          <div class="menu-item">
+            <div class="icon-box bg-tracking">
+              <img
+                class="menu-image"
+                src="../../../public/images/tracking.png"
+                width="55px"
+                alt=""
+              />
+            </div>
+            <span class="menu-label">Tracking Gizi</span>
+          </div>
+        </a>
+
+        <a
+          href="/src/pages/user/(features)/doctor.html"
+          style="
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          "
+        >
+          <div class="menu-item">
+            <div class="icon-box bg-dokter">
+              <img
+                class="menu-image"
+                src="../../../public/images/doctor.png"
+                alt=""
+                style="filter: brightness(0%)"
+                width="65px"
+              />
+            </div>
+            <span class="menu-label">Dokter Anak</span>
+          </div>
+        </a>
+
+        <a
+          href="/src/pages/user/(features)/hospital.html"
+          style="
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          "
+        >
+          <div class="menu-item">
+            <div class="icon-box bg-rumahsakit">
+              <img
+                class="menu-image"
+                src="../../../public/images/hospital.png"
+                alt=""
+                style="filter: brightness(0%)"
+                width="55px"
+              />
+            </div>
+            <span class="menu-label">Rumah Sakit</span>
+          </div>
+        </a>
+
+        <div class="menu-item">
+          <div class="icon-box bg-game">
+            <img
+              class="menu-image"
+              src="../../../public/images/games.png"
+              alt=""
+              style="filter: brightness(0%)"
+              width="50px"
+            />
+          </div>
+          <span class="menu-label">Game</span>
+        </div>
+
+        <div class="menu-item">
+          <div class="icon-box bg-history">
+            <img
+              class="menu-image"
+              src="../../../public/images/history.png"
+              alt=""
+              style="filter: brightness(0%)"
+              width="43px"
+            />
+          </div>
+          <span class="menu-label">History Gizi</span>
+        </div>
+
+        <div class="menu-item">
+          <a
+            href="features.html"
+            style="
+              text-decoration: none;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            "
+          >
+            <div class="icon-box bg-history">
+              <img
+                class="menu-image"
+                src="../../../public/images/more.png"
+                alt=""
+                style="filter: brightness(0%)"
+                width="43px"
+              />
+            </div>
+            <span class="menu-label">Lainnya</span>
+          </a>
+        </div>
+      </div>
+      <section class="banner-section">
+        <div class="banner-container">
+          <div
+            id="carousel-1"
+            class="carousel"
+            role="region"
+            aria-labelledby="carousel-1-title"
+          >
+            <div
+              class="slide"
+              role="tabpanel"
+              aria-labelledby="carousel-1-slide-1-title"
+            >
+              <div class="slide-content">
+                <div class="slide-caption">
+                  <h3 id="carousel-1-slide-1-title">Title</h3>
+                  <p>Description</p>
+                </div>
+
+                <img
+                  src="https://cdn.jsdelivr.net/gh/free-whiteboard-online/Free-Erasorio-Alternative-for-Collaborative-Design@cbe019eb72be2ce43d82aaf9118790dae3a70db8/uploads/2025-12-01T17-10-50-175Z-ls8qkwn9u.jpg"
+                  alt="Banner Photo 1"
+                  width="800"
+                  height="350"
+                />
+              </div>
+            </div>
+
+            <div
+              class="slide"
+              role="tabpanel"
+              aria-labelledby="carousel-1-slide-2-title"
+            >
+              <div class="slide-content">
+                <div class="slide-caption">
+                  <h3 id="carousel-1-slide-2-title">Title</h3>
+                  <p>Description</p>
+                </div>
+                <img
+                  src="https://cdn.jsdelivr.net/gh/free-whiteboard-online/Free-Erasorio-Alternative-for-Collaborative-Design@1a7952db18aa9db0ba39be5575fe8abfeb85e306/uploads/2025-12-01T17-11-51-377Z-oviji2luf.jpg"
+                  alt="Banner Photo 2"
+                  width="800"
+                  height="350"
+                />
+              </div>
+            </div>
+
+            <div
+              class="slide"
+              role="tabpanel"
+              aria-labelledby="carousel-1-slide-3-title"
+            >
+              <div class="slide-content">
+                <div class="slide-caption">
+                  <h3 id="carousel-1-slide-3-title">Title</h3>
+                  <p>Description</p>
+                </div>
+
+                <img
+                  src="https://cdn.jsdelivr.net/gh/free-whiteboard-online/Free-Erasorio-Alternative-for-Collaborative-Design@e7876e45f08f9274d54922608d1a08d26edb234e/uploads/2025-12-01T17-13-03-216Z-mwzwlejhm.png"
+                  alt="Banner Photo 3"
+                  width="800"
+                  height="350"
+                  style="object-view-box: inset(0 0 0)"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="infinite-slideshow">
+      <h2 class="home-label">Testimoni dan Dukungan:</h2>
+      <div class="container-slideshow">
+        <div class="group">
+          <div class="card">
+            <div class="inside-card-container">
+              <div class="img-contain">
+                <img src="https://i.pravatar.cc/150?img=1" alt="" />
+              </div>
+              <h3>User Name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
+                provident!
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="inside-card-container">
+              <div class="img-contain">
+                <img src="https://i.pravatar.cc/150?img=2" alt="" />
+              </div>
+              <h3>User Name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
+                provident!
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="inside-card-container">
+              <div class="img-contain">
+                <img src="https://i.pravatar.cc/150?img=3" alt="" />
+              </div>
+              <h3>User Name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
+                provident!
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="inside-card-container">
+              <div class="img-contain">
+                <img src="https://i.pravatar.cc/150?img=4" alt="" />
+              </div>
+              <h3>User Name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
+                provident!
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="inside-card-container">
+              <div class="img-contain">
+                <img src="https://i.pravatar.cc/150?img=5" alt="" />
+              </div>
+              <h3>User Name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
+                provident!
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="inside-card-container">
+              <div class="img-contain">
+                <img src="https://i.pravatar.cc/150?img=6" alt="" />
+              </div>
+              <h3>User Name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
+                provident!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="group">
+          <div class="card">
+            <div class="inside-card-container">
+              <div class="img-contain">
+                <img src="https://i.pravatar.cc/150?img=1" alt="" />
+              </div>
+              <h3>User Name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
+                provident!
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="inside-card-container">
+              <div class="img-contain">
+                <img src="https://i.pravatar.cc/150?img=2" alt="" />
+              </div>
+              <h3>User Name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
+                provident!
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="inside-card-container">
+              <div class="img-contain">
+                <img src="https://i.pravatar.cc/150?img=3" alt="" />
+              </div>
+              <h3>User Name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
+                provident!
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="inside-card-container">
+              <div class="img-contain">
+                <img src="https://i.pravatar.cc/150?img=4" alt="" />
+              </div>
+              <h3>User Name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
+                provident!
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="inside-card-container">
+              <div class="img-contain">
+                <img src="https://i.pravatar.cc/150?img=5" alt="" />
+              </div>
+              <h3>User Name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
+                provident!
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="inside-card-container">
+              <div class="img-contain">
+                <img src="https://i.pravatar.cc/150?img=6" alt="" />
+              </div>
+              <h3>User Name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
+                provident!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-slideshow">
+        <div class="group2">
+          <div class="card">
+            <div class="inside-card-container">
+              <div class="img-contain">
+                <img src="https://i.pravatar.cc/150?img=1" alt="" />
+              </div>
+              <h3>User Name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
+                provident!
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="inside-card-container">
+              <div class="img-contain">
+                <img src="https://i.pravatar.cc/150?img=2" alt="" />
+              </div>
+              <h3>User Name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
+                provident!
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="inside-card-container">
+              <div class="img-contain">
+                <img src="https://i.pravatar.cc/150?img=3" alt="" />
+              </div>
+              <h3>User Name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
+                provident!
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="inside-card-container">
+              <div class="img-contain">
+                <img src="https://i.pravatar.cc/150?img=4" alt="" />
+              </div>
+              <h3>User Name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
+                provident!
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="inside-card-container">
+              <div class="img-contain">
+                <img src="https://i.pravatar.cc/150?img=5" alt="" />
+              </div>
+              <h3>User Name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
+                provident!
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="inside-card-container">
+              <div class="img-contain">
+                <img src="https://i.pravatar.cc/150?img=6" alt="" />
+              </div>
+              <h3>User Name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
+                provident!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="group2">
+          <div class="card">
+            <div class="inside-card-container">
+              <div class="img-contain">
+                <img src="https://i.pravatar.cc/150?img=1" alt="" />
+              </div>
+              <h3>User Name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
+                provident!
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="inside-card-container">
+              <div class="img-contain">
+                <img src="https://i.pravatar.cc/150?img=2" alt="" />
+              </div>
+              <h3>User Name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
+                provident!
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="inside-card-container">
+              <div class="img-contain">
+                <img src="https://i.pravatar.cc/150?img=3" alt="" />
+              </div>
+              <h3>User Name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
+                provident!
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="inside-card-container">
+              <div class="img-contain">
+                <img src="https://i.pravatar.cc/150?img=4" alt="" />
+              </div>
+              <h3>User Name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
+                provident!
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="inside-card-container">
+              <div class="img-contain">
+                <img src="https://i.pravatar.cc/150?img=5" alt="" />
+              </div>
+              <h3>User Name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
+                provident!
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="inside-card-container">
+              <div class="img-contain">
+                <img src="https://i.pravatar.cc/150?img=6" alt="" />
+              </div>
+              <h3>User Name</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam,
+                provident!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="../../js/utils/auth.js"></script>
+    <script src="../../components/Header.js"></script>
+    <script src="../../components/Carousel.js"></script>
+    <script src="../../js/pages/home.js"></script>
+    <script src="../../js/main.js"></script>
+  </body>
+</html>

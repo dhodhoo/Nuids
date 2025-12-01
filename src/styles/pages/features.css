@@ -1,0 +1,144 @@
+/* --- CSS Reset & Base Styles --- */
+*,
+:before,
+:after {
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+:root {
+  --carousel-height: 300px;
+  --carousel-radius: 0.5em;
+  --carousel-nav-btn-dim: 3em;
+  --carousel-page-nav-btn-dim: 0.5em;
+  --carousel-caption-padding: 2em;
+  --carousel-caption-color: #fff;
+  --carousel-caption-bg: linear-gradient(
+    to bottom,
+    transparent,
+    hsl(0 0 0 / 65%) 80%
+  );
+  --carousel-inner-spacing: 2em;
+  --carousel-prev-next-btn-bg: #fff;
+  --carousel-prev-next-btn-color: #333;
+  --carousel-pagination-margin: 1em;
+  --carousel-pagination-gap: 0.75em;
+  --carousel-pagination-btn-bg: #aaa;
+  --carousel-pagination-btn-active-bg: #333;
+}
+
+/* Menu Section */
+.menu-section {
+  justify-self: center;
+  width: 70%;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-label {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  cursor: pointer;
+}
+
+.icon-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  margin-bottom: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.menu-item:hover .icon-box {
+  transform: translateY(-5px);
+}
+
+.menu-item .menu-image {
+  object-fit: cover;
+}
+
+/* Warna Gradasi untuk setiap icon */
+.bg-tracking {
+  background-image: linear-gradient(
+    to right top,
+    #85d3e6,
+    #add4f4,
+    #d2d6f4,
+    #eadbee,
+    #f4e4ea
+  );
+}
+.bg-dokter {
+  background-image: linear-gradient(
+    to right top,
+    #ffecc0,
+    #ffd9b0,
+    #fec5a5,
+    #fab2a0,
+    #f29fa0
+  );
+}
+.bg-rumahsakit {
+  background-image: linear-gradient(
+    to right top,
+    #b5ddbd,
+    #99d0c1,
+    #86c2c4,
+    #7eb2c2,
+    #7fa1ba
+  );
+}
+.bg-game {
+  background-image: linear-gradient(
+    to right top,
+    #fdecf4,
+    #f9d1e3,
+    #f5b6d1,
+    #f09bbd,
+    #eb7ea8
+  );
+}
+.bg-history {
+  background-image: linear-gradient(
+    to right top,
+    #9c65aa,
+    #b07ab4,
+    #c38fbf,
+    #d5a6cc,
+    #e5bdd9
+  );
+}
+
+.menu-label {
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  color: #000;
+}

@@ -1,0 +1,313 @@
+/* --- LIST KONSULTASI CONTAINER (Revisi) --- */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.page-container .title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.page-container .title h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.page-container .title p {
+  color: #777;
+}
+
+.doctor-list-container {
+  display: grid;
+  /* Tampilan Grid, 2 kolom di desktop, 1 di mobile */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* Doctor Card Styling (Revisi) */
+.doctor-card {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  align-items: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.profile-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 30%;
+  object-fit: cover;
+  margin-right: 15px;
+  border: 3px solid #7fa1ba;
+  -webkit-border-radius: 30%;
+  -moz-border-radius: 30%;
+  -ms-border-radius: 30%;
+  -o-border-radius: 30%;
+}
+
+.details {
+  flex-grow: 1;
+}
+
+.doctor-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 3px;
+}
+
+.specialty {
+  color: #f29fa0; /* Warna tema pastel pink */
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+}
+
+.rating {
+  font-size: 0.85rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+
+.rating .fa-star {
+  color: #ffc107; /* Bintang berwarna kuning */
+  margin-right: 5px;
+}
+
+/* Info & Button Section */
+.info-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding-left: 20px;
+  text-align: right;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.status.available {
+  background-color: #e6ffed;
+  color: #28a745;
+}
+
+.status.busy {
+  background-color: #ffe8e8;
+  color: #dc3545;
+}
+
+.cost {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.btn-chat {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(90deg, #7bd0e4, #5cb4c8);
+  color: white;
+  box-shadow: 0 4px 10px rgba(123, 208, 228, 0.4);
+  transition: transform 0.2s;
+}
+
+.btn-chat:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.btn-chat.disabled {
+  background: #e0e0e0;
+  color: #777;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* --- MODAL (POP-UP) STYLING --- */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000; /* Letakkan di atas semua elemen lain */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Background gelap */
+  backdrop-filter: blur(5px); /* Efek blur */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto; /* 10% dari atas dan ditengah secara horizontal */
+  padding: 30px;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 3px solid #7fa1ba;
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #f29fa0;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal Body Content */
+#modal-body .doctor-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+}
+
+#modal-body .profile-img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 15px;
+}
+
+#modal-body h3 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+#modal-body .specialty {
+  font-size: 1rem;
+}
+
+#modal-body .description {
+  text-align: left;
+  margin-top: 15px;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+#modal-body .details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  text-align: left;
+  margin-top: 20px;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+}
+
+#modal-body .detail-item strong {
+  display: block;
+  color: #777;
+  font-size: 0.85rem;
+  margin-bottom: 3px;
+}
+
+#modal-body .detail-item span {
+  font-weight: 600;
+  color: #333;
+}
+
+#modal-body .action-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+#modal-body .btn-booking {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #f29fa0;
+  border-radius: 10px;
+  background: #fff;
+  color: #f29fa0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#modal-body .btn-booking:hover {
+  background: #fef0f2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .doctor-list-container {
+    grid-template-columns: 1fr; /* Satu kolom di HP */
+  }
+  .modal-content {
+    width: 95%;
+    margin: 5% auto;
+  }
+  .doctor-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-section {
+    flex-direction: column;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding-right: 0;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+  .profile-img {
+    margin: 0 0 10px 0;
+  }
+  .info-section {
+    align-items: center;
+    padding-left: 0;
+  }
+  #modal-body .details-grid {
+    grid-template-columns: 1fr;
+  }
+}

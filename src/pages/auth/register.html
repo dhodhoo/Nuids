@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Nuids</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../lib/background-blob.css" />
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/pages/register.css" />
+  </head>
+  <body>
+    <div class="container-register">
+      <h2 class="greeting">Hi! Selamat Datang di Nuids.</h2>
+
+      <div class="acrylic-card">
+        <div class="logo-container">
+          <img src="../../../public/images/logo.png" alt="" />
+        </div>
+
+        <form id="registerForm">
+          <div class="form-group">
+            <input
+              id="regName"
+              type="text"
+              class="custom-input input-teal"
+              placeholder="Nama Lengkap"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              id="regEmail"
+              type="email"
+              class="custom-input input-pink-blue"
+              placeholder="Email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              id="regPassword"
+              type="password"
+              class="custom-input input-pink"
+              placeholder="Password"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              id="regConfirmPassword"
+              type="password"
+              class="custom-input input-pink"
+              placeholder="Konfirmasi Password"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn-register" id="registerBtn">
+            <span class="btn-text">Register</span>
+            <div class="loader"></div>
+          </button>
+        </form>
+        <a href="login.html">Sudah punya akun? Login</a>
+      </div>
+    </div>
+
+    <script type="module" src="../../js/utils/auth.js"></script>
+    <script src="../../js/main.js"></script>
+  </body>
+</html>

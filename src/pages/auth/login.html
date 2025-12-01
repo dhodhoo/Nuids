@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Nuids</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../lib/background-blob.css" />
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/pages/login.css" />
+  </head>
+  <body>
+    <div class="container-login">
+      <h2 class="greeting">Hi! Selamat Datang Kembali di Nuids.</h2>
+
+      <div class="acrylic-card">
+        <div class="logo-container">
+          <img src="../../../public/images/logo.png" alt="" />
+        </div>
+
+        <form id="loginForm">
+          <div class="form-group">
+            <input
+              id="loginEmail"
+              type="email"
+              class="custom-input input-teal"
+              placeholder="Email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              id="loginPassword"
+              type="password"
+              class="custom-input input-pink"
+              placeholder="Password"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn-login" id="loginBtn">
+            <span class="btn-text">Login</span>
+            <div class="loader"></div>
+          </button>
+        </form>
+        <a href="register.html">Belum punya akun? Daftar sekarang</a>
+      </div>
+    </div>
+
+    <script src="../../js/utils/auth.js"></script>
+    <script src="../../js/main.js"></script>
+  </body>
+</html>

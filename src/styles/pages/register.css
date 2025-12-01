@@ -1,0 +1,207 @@
+/* Reset CSS Dasar */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden; /* Mencegah scroll horizontal jika blob terlalu lebar */
+}
+
+.container-register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  padding: 20px;
+  text-align: center;
+  z-index: 10; /* Memastikan konten di atas background blobs */
+}
+
+.greeting {
+  color: #81c7bc; /* Warna hijau tosca sesuai gambar */
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Placeholder untuk Logo 'N' */
+.logo-container {
+  width: 100px;
+  height: 100px;
+}
+
+.logo-container img {
+  width: 100px;
+  object-fit: cover;
+}
+
+.acrylic-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem;
+  width: 30%;
+  padding: 0 0 25px 0;
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  backdrop-filter: blur(10px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+form {
+  width: 100%;
+}
+
+/* Styling Form Elements */
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Teknik Input dengan Gradient Border 
+        */
+.custom-input {
+  width: 85%; /* Lebar input tidak penuh */
+  padding: 15px 20px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  border-radius: 50px; /* Membuat bentuk pil */
+  color: #555;
+
+  /* Trik untuk gradient border:
+               1. Set border transparan.
+               2. Gunakan dua background image:
+                  - Layer 1: Warna solid putih untuk bagian dalam input (padding-box).
+                  - Layer 2: Linear gradient untuk bagian border (border-box).
+            */
+  border: 2px solid transparent;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  transition: transform 0.2s ease;
+}
+
+.custom-input::placeholder {
+  color: #b0b0b0; /* Warna placeholder abu-abu muda */
+}
+
+.custom-input:focus {
+  transform: scale(1.02); /* Sedikit efek membesar saat diklik */
+}
+
+/* Warna-warna spesifik untuk setiap input border */
+.input-teal {
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(to right, #a7e2da, #8ab6d6);
+}
+.input-pink-blue {
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(to right, #d4fcff, #f3e5f5, #f8bbd0);
+}
+.input-pink {
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(to right, #e1bee7, #f8bbd0);
+}
+
+/* --- Tombol Register (Enhanced UI/UX) --- */
+.btn-register {
+  width: 70%;
+  max-width: 400px;
+  padding: 13px; /* Sedikit dikurangi agar proporsional */
+  border: none;
+  border-radius: 50px;
+  font-size: 20px; /* Ukuran font lebih standar untuk tombol mobile/desktop */
+  font-weight: 700;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  position: relative; /* Penting untuk posisi loading spinner nanti */
+  overflow: hidden; /* Agar efek ripple tidak keluar tombol */
+
+  /* Gradient */
+  background: linear-gradient(
+    90deg,
+    #80deea 0%,
+    #b2ebf2 30%,
+    #f8bbd0 70%,
+    #fce4ec 100%
+  );
+  background-size: 200% auto; /* Persiapan untuk animasi hover gradient */
+
+  /* Shadow lebih halus & modern (Elevation) */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+  /* Transisi halus untuk semua properti yang berubah */
+  transition: all 0.3s ease;
+}
+
+/* State HOVER: Memberikan clue bahwa elemen bisa diklik */
+.btn-register:hover {
+  transform: translateY(-2px); /* Naik sedikit */
+  box-shadow: 0 8px 20px rgba(128, 222, 234, 0.4); /* Shadow melebar */
+  background-position: right center; /* Efek gradient bergerak halus */
+}
+
+/* State ACTIVE: Memberikan feedback taktil saat ditekan */
+.btn-register:active {
+  transform: scale(0.98); /* Mengecil sedikit seolah ditekan fisik */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow mengecil */
+}
+
+/* State FOCUS-VISIBLE: Wajib untuk Aksesibilitas Keyboard (Tab) */
+.btn-register:focus-visible {
+  outline: 3px solid #5c6bc0; /* Warna outline kontras */
+  outline-offset: 3px;
+}
+
+/* State DISABLED / LOADING: Saat sistem sedang memproses */
+.btn-register:disabled,
+.btn-register[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+  transform: none;
+  box-shadow: none;
+  background: #e0e0e0; /* Atau tetap gradient tapi pudar */
+  color: #888;
+}
+
+/* --- Styling untuk Loading Spinner (Opsional tapi UX Bagus) --- */
+.loader {
+  display: none; /* Tersembunyi secara default */
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: #333;
+  animation: spin 1s ease-in-out infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Class helper untuk mengganti teks jadi spinner */
+.btn-register.loading .btn-text {
+  display: none;
+}
+.btn-register.loading .loader {
+  display: inline-block;
+}
+
+.acrylic-card a {
+  margin-top: 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.acrylic-card a:hover {
+  text-decoration: underline;
+  color: #58a5da;
+}

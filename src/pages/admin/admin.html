@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | Nuids</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../lib/background-blob.css" />
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/pages/admin.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+    <div class="admin-wrapper">
+      <!-- SIDEBAR -->
+      <aside class="admin-sidebar acrylic-card">
+        <div class="profile-sidebar">
+          <div class="avatar-placeholder">👤</div>
+          <h3 class="adminName"></h3>
+          <p>Super Administrator</p>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="#" class="nav-item active" data-target=".main-dashboard"
+            >Dashboard Utama</a
+          >
+          <a href="#" class="nav-item" data-target="#manajemenUser"
+            >Manajemen User</a
+          >
+          <a href="#" class="nav-item" data-target="#dataGizi">Data Gizi</a>
+          <a href="#" class="nav-item" data-target="#laporanAnalitik"
+            >Laporan & Analitik</a
+          >
+          <a href="#" class="nav-item" data-target="#pengaturanSistem"
+            >Pengaturan Sistem</a
+          >
+        </nav>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <section class="page-section show main-dashboard">
+          <h2 class="section-title" style="text-align: left; margin-top: 0">
+            Ringkasan Harian
+          </h2>
+
+          <div class="stats-grid">
+            <div class="acrylic-card stat-card">
+              <div class="stat-icon">🟢</div>
+              <h4>User Online</h4>
+              <div class="stat-value" id="onlineUserCount"></div>
+              <p>Pengguna aktif saat ini.</p>
+            </div>
+
+            <div class="acrylic-card stat-card">
+              <div class="stat-icon">📥</div>
+              <h4>Total Registrasi</h4>
+              <div class="stat-value" id="totalRegistrations"></div>
+              <p>Total akun terdaftar.</p>
+            </div>
+
+            <div class="acrylic-card stat-card">
+              <div class="stat-icon">👨‍⚕️</div>
+              <h4>Dokter Ready</h4>
+              <div class="stat-value"></div>
+              <p>Dokter yang siap konsultasi.</p>
+            </div>
+          </div>
+
+          <div class="bottom-sections-grid">
+            <div class="acrylic-card activity-log-card">
+              <h4>Aktivitas Log Terbaru</h4>
+              <ul id="activityLog">
+                <li>[14:30] User baru: budi@mail.com</li>
+                <li>[14:15] Dokter Aulia set status READY</li>
+                <li>[14:00] Data gizi terkirim: Anak Risa</li>
+              </ul>
+            </div>
+            <div class="acrylic-card">
+              <h4>User Online Saat Ini</h4>
+              <ul id="onlineUserList"></ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="manajemenUser" class="page-section hidden">
+          <h2 class="section-title">Manajemen User</h2>
+
+          <div class="acrylic-card">
+            <h4>Daftar User</h4>
+            <div class="user-filter-panel">
+              <input
+                type="text"
+                id="searchUserInput"
+                placeholder="Cari user..."
+                class="custom-input"
+              />
+
+              <select id="filterUserStatus" class="custom-input">
+                <option value="all">Semua</option>
+                <option value="online">Online</option>
+                <option value="offline">Offline</option>
+              </select>
+            </div>
+
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Nama</th>
+                  <th>Email</th>
+                  <th>Status</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="userTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="dataGizi" class="page-section hidden">
+          <h2 class="section-title">Data Gizi</h2>
+
+          <div class="acrylic-card">
+            <h4>Riwayat Pengisian Data Gizi</h4>
+
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Nama Anak</th>
+                  <th>Usia</th>
+                  <th>Status Gizi</th>
+                  <th>Tanggal Input</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Adit</td>
+                  <td>4 Tahun</td>
+                  <td><span class="status good">Sehat</span></td>
+                  <td>2025-11-20</td>
+                </tr>
+                <tr>
+                  <td>Sinta</td>
+                  <td>2 Tahun</td>
+                  <td><span class="status warning">Kurang</span></td>
+                  <td>2025-11-18</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="laporanAnalitik" class="page-section hidden">
+          <h2 class="section-title">Laporan & Analitik</h2>
+
+          <div class="acrylic-card" style="margin-top: 20px">
+            <h4>Unduh Laporan</h4>
+            <button class="btn-primary" style="margin-top: 10px">
+              Unduh PDF
+            </button>
+          </div>
+        </section>
+
+        <section id="pengaturanSistem" class="page-section hidden">
+          <h2 class="section-title">Pengaturan Sistem</h2>
+
+          <div class="acrylic-card">
+            <h4>Konfigurasi Aplikasi</h4>
+
+            <label>Nama Aplikasi</label>
+            <input
+              type="text"
+              class="custom-input"
+              value="Nuids - Admin Panel"
+            />
+
+            <label style="margin-top: 10px">Mode Notifikasi</label>
+            <select class="custom-input">
+              <option>Aktif</option>
+              <option>Nonaktif</option>
+            </select>
+
+            <button class="btn-primary full" style="margin-top: 15px">
+              Simpan Pengaturan
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <!-- modal -->
+      <div id="userDetailModal" class="modal hidden">
+        <div class="modal-content">
+          <span id="closeUserModal" class="modal-close">&times;</span>
+          <div class="modal-header">
+            <div class="modal-avatar">👤</div>
+            <h3 id="modalUserName"></h3>
+            <p id="modalUserEmail"></p>
+          </div>
+
+          <div class="modal-body">
+            <p><strong>Status:</strong> <span id="modalUserStatus"></span></p>
+            <p><strong>Role:</strong> <span id="modalUserRole"></span></p>
+            <p>
+              <strong>Tanggal Registrasi:</strong>
+              <span id="modalUserDate"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="../../js/utils/auth.js"></script>
+    <script type="module" src="../../js/pages/admin.js"></script>
+    <script src="../../components/Header.js"></script>
+    <script src="../../js/main.js"></script>
+    <script>
+      document.body.dataset.page = "admin";
+    </script>
+  </body>
+</html>
